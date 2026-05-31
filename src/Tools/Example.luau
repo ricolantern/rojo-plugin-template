@@ -14,7 +14,6 @@ return Tool.new {
         {
             name = "Print selection name",
             desc = "Outputs the name of the current selection to console.",
-            version = "1.0.0",
             execute = function(): ()
                 const selections = SelectionService:Get()
 
@@ -32,6 +31,6 @@ return Tool.new {
 
                 Output.print(`You selected {selected.Name}!`)
             end,
-        }
+        },
     }
 }
