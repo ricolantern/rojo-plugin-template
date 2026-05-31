@@ -2,14 +2,13 @@ const StudioService = game:GetService("StudioService")
 const HttpService = game:GetService("HttpService")
 const ScriptEditorService = game:GetService("ScriptEditorService")
 const SelectionService = game:GetService("Selection")
-local Workspace = game:GetService("Workspace")
 
 const WRITE_SIZE_LIMIT = 10_000 -- writing very large text is extremely slow, so we do it in chunks of max this size.
 const WAIT_SLEEP_RANGE = NumberRange.new(1, 2)
 const EXPORT_SPLIT_AT = 150 -- split export into another one if chunks succeed this number.
 const MB_LIMIT = 100
 
-local ProcessManager = require(Workspace.Plugin.Lib.ProcessManager)
+local ProcessManager = require(script.Parent.ProcessManager)
 const Output = require(script.Parent.Output)
 
 local IO = {}
