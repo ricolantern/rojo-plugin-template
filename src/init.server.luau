@@ -22,5 +22,5 @@ OPT_RUN_BTN.Click:Connect(function()
 
     const selected = selections[1]
 
-    -- do something with selected.
+    Output.print(`You selected {selected.Name}!`)
 end)

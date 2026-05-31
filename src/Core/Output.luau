@@ -1,13 +1,13 @@
-const Constants = require(script.Parent.Constants)
+const Info = require(script.Parent.Info)
 
 local Output = {}
 
 function Output.print<T...>(msg: string, ...: T...): ()
-    print(`[{Constants.PLUGIN_NAME}] :: {msg}`, ...)
+    print(`[{Info.NAME}] :: {msg}`, ...)
 end
 
 function Output.warn<T...>(msg: string, ...: T...): ()
-    warn(`[{Constants.PLUGIN_NAME}] :: {msg}`, ...)
+    warn(`[{Info.NAME}] :: {msg}`, ...)
 end
 
 function Output.blank(): ()
