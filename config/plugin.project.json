@@ -1,0 +1,15 @@
+{
+  "name": "ExamplePlugin",
+  "tree": {
+    "$path": "../src",
+
+    "Metadata": {
+      "$className": "Configuration",
+      "$properties": {
+        "Attributes": {
+          "Version": {"String": "1.0.0"}
+        }
+      }
+    }
+  }
+}

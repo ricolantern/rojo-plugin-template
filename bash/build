@@ -1,0 +1,28 @@
+#!/bin/bash
+
+declare cmd=$1
+declare config=$(<config/plugin.project.json)
+declare pluginName=$(echo "$config" | grep -oP '"name"\s*:\s*"\K[^"]*(?=")')
+
+function __buildFile() {
+    rojo build "config/${1}.project.json" --output "${1}.rbxl"
+}
+
+function __buildPlugin() {
+    rojo build "config/plugin.project.json" --plugin "${pluginName}.rbxmx"
+}
+
+function dev() {
+    __buildFile "dev"
+}
+
+function plugin() {
+    __buildPlugin
+}
+
+# must be identical to luau-lsp.sourcemap.generatorCommand
+function sourcemap() {
+    rojo sourcemap config/dev.project.json -o sourcemap.json --include-non-scripts --absolute
+}
+
+eval $cmd

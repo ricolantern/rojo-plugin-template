@@ -1,0 +1,22 @@
+# Project place file
+/**.rbxlx
+/**.rbxl
+
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+sourcemap.json
+
+
+# Added by cargo
+
+/target
+
+
+# Wally
+/DevPackages/**
+!/DevPackages/.gitkeep
+/Packages/**
+!/Packages/.gitkeep
+wally.lock
