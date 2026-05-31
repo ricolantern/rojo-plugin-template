@@ -8,10 +8,10 @@ const DESC = [[
     Example plugin.
 ]]
 
-const Core = {
+const Info = {
     VERSION = VERSION,
     NAME = NAME,
     DESC = DESC,
 }
 
-return Core
+return Info

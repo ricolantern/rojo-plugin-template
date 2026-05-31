@@ -9,7 +9,7 @@ const WAIT_SLEEP_RANGE = NumberRange.new(1, 2)
 const EXPORT_SPLIT_AT = 150 -- split export into another one if chunks succeed this number.
 const MB_LIMIT = 100
 
-local ProcessManager = require(Workspace.Plugin.Core.ProcessManager)
+local ProcessManager = require(Workspace.Plugin.Lib.ProcessManager)
 const Output = require(script.Parent.Output)
 
 local IO = {}
