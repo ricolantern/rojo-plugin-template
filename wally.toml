@@ -1,5 +1,5 @@
 [package]
-name = "rico/ao-script-runner"
+name = "rico/rojo-plugin-template"
 version = "0.1.0"
 registry = "https://github.com/UpliftGames/wally-index"
 private = true
