@@ -9,7 +9,7 @@ function __serve() {
 
 function new() {
     bash/build $type \
-        && start "${type}.rbxl" \
+        && start "builds/${type}.rbxl" \
         && __serve
 }
 

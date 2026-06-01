@@ -1,0 +1,13 @@
+#!/bin/bash
+
+declare foldDevPkg="DevPackages"
+declare foldPkg="Packages"
+declare foldBuilds="builds"
+declare fileSourcemap="sourcemap.json"
+
+find $foldDevPkg -type f -not -name '.gitkeep' -delete
+find $foldPkg -type f -not -name '.gitkeep' -delete
+find $foldBuilds -type f -not -name '.gitkeep' -delete
+find $fileSourcemap -type f -delete
+
+echo "Cleaned up all temporary files."

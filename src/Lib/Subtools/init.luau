@@ -9,7 +9,6 @@ const Tool = require(script.Tool)
 const String = require(ROOT.Lib.String)
 
 const Subtools = {}
-Subtools.__index = {}
 
 function Subtools.init(toolbar: PluginToolbar, folder: Folder): ()
     for i, module in next, folder:GetChildren() do
@@ -22,7 +21,7 @@ function Subtools.init(toolbar: PluginToolbar, folder: Folder): ()
         do -- about
             j += 1
             
-            local name: string = `About {tool.name} v{tool.version}`
+            local name: string = `ABOUT {tool.name} v{tool.version}`
             local displayName: string = `{toolName} {String.getChar(j)}) {name}`
             local instance: PluginToolbarButton = toolbar:CreateButton(`{tool.name}.{name}`, "Displays this tool's information.", "", displayName)
 

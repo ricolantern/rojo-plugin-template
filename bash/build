@@ -5,7 +5,7 @@ declare config=$(<config/plugin.project.json)
 declare pluginName=$(echo "$config" | grep -oP '"name"\s*:\s*"\K[^"]*(?=")')
 
 function __buildFile() {
-    rojo build "config/${1}.project.json" --output "${1}.rbxl"
+    rojo build "config/${1}.project.json" --output "builds/${1}.rbxl"
 }
 
 function __buildPlugin() {
